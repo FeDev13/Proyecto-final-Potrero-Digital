@@ -1,47 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
-  <title>Document</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a href="https://www.linkedin.com/in/federicorobledo13/" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/7950F2/linkedin.png" alt="linkedin"/></a>
-      <a href="https://github.com/FeDev13" target="_blank"><img width="50" height="50" src="https://img.icons8.com/glyph-neue/64/7950F2/github.png" alt="github"/></a>
-      <a href=""><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/7950F2/email.png" alt="email"/></a>
-    </nav>
-  </header>
-  <h1 class="typewriter">Hola! Soy FeDev13</h1>
-  <h3>Frontend Developer</h3>
-  <div class="container">
-    <img src="" alt="" />
-    <div class="about-me">
-      <p>
-        Soy Federico, desarrollador Frontend. Tengo conocimientos en HTML, CSS
-        y Javascript y en versionado de control como Git y Github
-      </p>
+  <body>
+    <header>
+      <nav>
+        <a href="https://www.linkedin.com/in/federicorobledo13/" target="_blank"
+          ><img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios-filled/50/7950F2/linkedin.png"
+            alt="linkedin"
+        /></a>
+        <a href="https://github.com/FeDev13" target="_blank"
+          ><img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/glyph-neue/64/7950F2/github.png"
+            alt="github"
+        /></a>
+        <a href="mailto: federicorobledo85@gmail.com"
+          ><img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios-filled/50/7950F2/email.png"
+            alt="email"
+        /></a>
+      </nav>
+    </header>
+    <h1 class="typewriter">Hola! Soy FeDev13</h1>
+    <h3>Frontend Developer</h3>
+    <div class="container">
+      <div class="cards-grid">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>ACERCA DE MI</p></div>
+            <div class="flip-card-back">
+              Hola, soy Federico, Frontend developer con conocimientos en HTML,
+              CSS, Javascript, GIT, entre otros
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <h3>Skills</h3>
-  <div class="skills-container">
-    <div> <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt=""></div>
-    <div> <img src="https://img.freepik.com/free-icon/css_318-698167.jpg" alt=""></div>
-    <div> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png" alt=""></div>
-  </div>
+    <h3>Skills</h3>
+    <div class="skills-container">
+      <div>
+        <img
+          class="skills-image"
+          src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="skills-image"
+          src="https://img.freepik.com/free-icon/css_318-698167.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="skills-image"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <h3 id="proyectId">Proyectos</h3>
+    <div class="proyects">
+      <div class="card">
+        <img
+          width="48"
+          height="48"
+          src="https://img.icons8.com/material/48/FFFFFF/buy--v1.png"
+          alt="buy--v1"
+        />
+        <p>Ecommerce (HTML, CSS, JS)</p>
+        <div class="btn-container"><button>Ver</button></div>
+      </div>
 
-  <div class="proyects">
-    <div class="card"><p>proyecto Ecommerce usando HTML, CSS y vanilla JS</p></div>
-    <div class="card"><p>Traductor a idioma chino</p></div>
-    <div class="card"><p>Clon red social</p></div>
-  </div>
-  <script src="https://kit.fontawesome.com/3663c2d0e4.js" crossorigin="anonymous"></script>
-</body>
-
+      <div class="card">
+        <img
+          width="48"
+          height="48"
+          src="https://img.icons8.com/material/48/FFFFFF/pagoda.png"
+          alt="pagoda"
+        />
+        <p>Traductor a idioma chino</p>
+        <div class="btn-container"><button>Ver</button></div>
+      </div>
+      <div class="card">
+        <img
+          width="48"
+          height="48"
+          src="https://img.icons8.com/material/48/FFFFFF/weixing.png"
+          alt="weixing"
+        />
+        <p>Clon red social</p>
+        <div class="btn-container"><button>Ver</button></div>
+      </div>
+    </div>
+    <footer>
+      <div class="btn-footer"><button>Contactemos!</button></div>
+      <div class="social-footer">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/federicorobledo13/"
+              ><i style="font-size: 48px" class="lab la-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/FeDev13"
+              ><i style="font-size: 48px" class="lab la-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto: federicorobledo85@gmail.com"
+              ><i style="font-size: 48px" class="las la-at"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/3663c2d0e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
