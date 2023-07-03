@@ -1,52 +1,52 @@
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', cursive;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
-header{
-    display: flex;
-    top: 0;
-    position: sticky;
-    margin-bottom: 3rem;
+header {
+  display: flex;
+  top: 0;
+  position: sticky;
+  margin-bottom: 3rem;
 }
-nav{
-    
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    background-color: black;
+nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: black;
 }
-nav a{
-    margin: 0 2rem 0 2rem;
+nav a {
+  margin: 0 2rem 0 2rem;
 }
-
-h1, h3{
-    text-transform: uppercase;
-     text-align: center;
-     color: blueviolet;
-     margin: 5rem 0 3rem 0;
+nav a[href^="mailto:"] {
+  color: blueviolet;
 }
 
+h1,
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: blueviolet;
+  margin: 5rem 0 3rem 0;
+}
 
-.flip-card {
+.card {
   width: 320px;
   height: 504px;
   perspective: 2000px;
   margin: auto;
 }
-.flip-card-inner {
+.sub-card {
   position: relative;
   width: 100%;
   height: 100%;
@@ -55,7 +55,8 @@ h1, h3{
   transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
   transform-style: preserve-3d;
 }
-.flip-card-front, .flip-card-back {
+.flip-card-frente,
+.flip-card-reverso {
   text-align: center;
   position: absolute;
   width: 100%;
@@ -63,14 +64,14 @@ h1, h3{
   border-radius: 28px;
   backface-visibility: hidden;
 }
-.flip-card-front {
+.flip-card-frente {
   margin-top: 5rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
-.flip-card-back {
+.flip-card-reverso {
   font-size: 1.25rem;
   text-align: center;
   display: grid;
@@ -80,63 +81,68 @@ h1, h3{
   color: white;
   transform: rotateY(180deg);
 }
-.flip-card:hover .flip-card-inner {
+.card:hover .sub-card {
   transform: rotateY(-180deg);
 }
-.typewriter{
-    margin-left: 20rem;
-    width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-size: 2em;
+.animacion {
+  margin: auto;
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
+}
+.h1Container {
+  display: flex;
+}
+@media screen and (max-width: 721px) {
+  .h1Container {
+    flex-wrap: wrap;
   }
-.container .about-me{
-    width: 50%;
-    color: blueviolet;
-    border: 1px solid white;
-    margin-bottom: 8rem;
-    
+}
+.container .about-me {
+  width: 50%;
+  color: blueviolet;
+  border: 1px solid white;
+  margin-bottom: 8rem;
 }
 .skills-container {
-    display: flex;
-    justify-content: center;
-    height: 50%;
+  display: flex;
+  justify-content: center;
+  height: 50%;
 }
-.skills-container div{
-    background-color: transparent;
-    margin: 2rem;
-    text-align: center;
-
+.skills-container div {
+  background-color: transparent;
+  margin: 2rem;
+  text-align: center;
 }
-@media screen and (max-width:700px){
-    .skills-container{
-        flex-direction: column;
-    }
-    
+@media screen and (max-width: 700px) {
+  .skills-container {
+    flex-direction: column;
+  }
 }
 
-.skills-image{
-    width: 50%;
-    height: auto;
+.skills-image {
+  width: 50%;
+  height: auto;
 }
-#proyectId{
+#proyectId {
   margin-top: 15rem;
 }
-.proyects{
+.proyects {
   margin: 0 2rem 0 2rem;
   background-color: black;
   display: grid;
@@ -145,19 +151,19 @@ h1, h3{
   margin-top: 10rem;
 }
 
-@media screen and (max-width:700px){
-  .proyects{
-      grid-template-columns: 1fr;
-     gap: 10rem;
+@media screen and (max-width: 1040px) {
+  .proyects {
+    display: flex;
+    flex-wrap: wrap;
   }
-  
 }
-.card{
+.card {
   background-color: black;
   color: white;
   text-align: center;
+  position: relative;
 }
-.card button{
+.card .btn-container button {
   cursor: pointer;
   margin-top: 3rem;
   background-color: blueviolet;
@@ -166,44 +172,44 @@ h1, h3{
   padding: 8px;
   transition: 0.5s;
 }
-.card button:hover{
- padding: 15px;
- text-transform: uppercase; 
+.card button:hover {
+  padding: 15px;
+  text-transform: uppercase;
 }
 .card p {
   margin-top: 5rem;
 }
-.btn-container{
-  margin-top: 1rem;
-}
-footer{
+
+footer {
   display: flex;
   justify-content: space-between;
   margin-top: 10rem;
   color: white;
 }
-footer button{
+footer button {
   background-color: blueviolet;
   color: white;
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
 }
-footer ul{
+footer ul {
   margin-right: 2rem;
 }
-footer li{
+footer li {
   list-style: none;
 }
-@media screen and (max-width:700px){
-  footer{
-      flex-direction: column;
+footer ul li a[href^="mailto:"] {
+  color: blueviolet;
+}
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
   }
-  .btn-footer, .social-footer{
+  .btn-footer,
+  .social-footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
   }
-  
-  
 }
