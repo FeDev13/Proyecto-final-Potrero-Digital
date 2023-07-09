@@ -16,6 +16,7 @@ header {
   top: 0;
   position: sticky;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 nav {
   display: flex;
@@ -40,12 +41,24 @@ h3 {
   margin: 5rem 0 3rem 0;
 }
 
-.card {
-  width: 320px;
+.container {
+  z-index: -1;
+}
+.card1 {
+  width: 504px;
   height: 504px;
   perspective: 2000px;
   margin: auto;
 }
+@media screen and (max-width: 393px) {
+  .card1 {
+    width: 100px;
+  }
+  .flip-card-reverso {
+    display: flex;
+  }
+}
+
 .sub-card {
   position: relative;
   width: 100%;
@@ -81,7 +94,7 @@ h3 {
   color: white;
   transform: rotateY(180deg);
 }
-.card:hover .sub-card {
+.card1:hover .sub-card {
   transform: rotateY(-180deg);
 }
 .animacion {
@@ -92,6 +105,13 @@ h3 {
   overflow: hidden;
   border-right: 3px solid;
   font-size: 2em;
+}
+
+@media screen and (max-width: 578px) {
+  .animacion {
+    animation: none;
+    font-size: 1em;
+  }
 }
 
 @keyframes typing {
@@ -113,16 +133,12 @@ h3 {
     flex-wrap: wrap;
   }
 }
-.container .about-me {
-  width: 50%;
-  color: blueviolet;
-  border: 1px solid white;
-  margin-bottom: 8rem;
-}
+
 .skills-container {
   display: flex;
   justify-content: center;
   height: 50%;
+  z-index: 0;
 }
 .skills-container div {
   background-color: transparent;
@@ -149,9 +165,10 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 10rem;
+  z-index: 0;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1593px) {
   .proyects {
     display: flex;
     flex-wrap: wrap;
@@ -162,12 +179,14 @@ h3 {
   color: white;
   text-align: center;
   position: relative;
+  margin: 2rem;
+  padding: 3rem;
 }
 .card .btn-container button {
   cursor: pointer;
   margin-top: 3rem;
   background-color: blueviolet;
-  color: white;
+
   border-radius: 10px;
   padding: 8px;
   transition: 0.5s;
@@ -179,12 +198,17 @@ h3 {
 .card p {
   margin-top: 5rem;
 }
+.card a {
+  color: white;
+  text-decoration: none;
+}
 
 footer {
   display: flex;
   justify-content: space-between;
   margin-top: 10rem;
   color: white;
+  z-index: 0;
 }
 footer button {
   background-color: blueviolet;
