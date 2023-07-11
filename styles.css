@@ -57,6 +57,9 @@ h3 {
   .flip-card-reverso {
     display: flex;
   }
+  .flip-card-reverso p {
+    position: absolute;
+  }
 }
 
 .sub-card {
@@ -172,6 +175,7 @@ h3 {
   .proyects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .card {
