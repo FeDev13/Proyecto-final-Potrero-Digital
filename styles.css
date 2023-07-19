@@ -33,12 +33,16 @@ nav a[href^="mailto:"] {
   color: blueviolet;
 }
 
+.logo-container {
+  text-align: center;
+}
+
 h1,
 h3 {
   text-transform: uppercase;
   text-align: center;
   color: blueviolet;
-  margin: 5rem 0 3rem 0;
+  margin: 2rem 0 3rem 0;
 }
 
 .container {
@@ -229,14 +233,26 @@ footer li {
 footer ul li a[href^="mailto:"] {
   color: blueviolet;
 }
+.logo-footer{
+  width: 100%;
+  text-align: center;
+}
+.logo-footer img {
+  height: 60%;
+}
+
 @media screen and (max-width: 700px) {
   footer {
     flex-direction: column;
   }
   .btn-footer,
+  .logo-footer,
   .social-footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
+  }
+  .social-footer ul li {
+    margin-bottom: 2rem;
   }
 }
